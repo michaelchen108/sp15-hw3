@@ -1,3 +1,19 @@
-<h1> <%= @users %> </h1>
-<h1> <%= @cats %> </h1>
-<h1> <%= @todos %> </h1>
+<h1> Users </h1>
+
+<% @users.each do |user| %>
+	<%= user.username + " " + user.email + " " + user.age.to_s %>
+<% end %>
+
+
+<h1> Cats </h1>
+
+<% @cats.each do |cat| %>
+	<%= cat.name %>
+<% end %>
+
+
+<h1> Todos </h1>
+
+<% @todos.each do |todo| %>
+	<%= todo.tasks + " " + todo.finished.to_s %>
+<% end %>
